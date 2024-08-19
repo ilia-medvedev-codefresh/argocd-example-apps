@@ -18,6 +18,9 @@ spec:
     metadata:
       labels:
         app: {{ template "helm-guestbook.name" . }}
+        {{- with .Values.podLabels }}
+          {{-  . | toYaml | nindent 8 }}
+        {{- end }}
         release: {{ .Release.Name }}
     spec:
       containers:
