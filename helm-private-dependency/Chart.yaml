@@ -1,0 +1,8 @@
+apiVersion: v2
+description: guestbook-private-dependency
+name: guestbook-private
+version: 0.1.0
+dependencies:
+  - name: helm-guestbook
+    repository: oci://quay.io/iliasandbox/charts
+    version: 0.1.0
